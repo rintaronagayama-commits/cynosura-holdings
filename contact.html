@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - 株式会社Cynosura Holdings</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Digital Grid Background Canvas -->
+    <canvas id="digital-grid"></canvas>
+    
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="Cynosura Holdings Logo" class="logo-image">
+                    <span class="company-name glitch" data-text="Cynosura Holdings">Cynosura Holdings</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="メニュー">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="message.html">代表挨拶</a></li>
+                    <li><a href="services.html">事業内容</a></li>
+                    <li><a href="contact.html" class="cta-button active">お問い合わせ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title glitch" data-text="お問い合わせ">お問い合わせ</h1>
+            <p class="page-subtitle">Contact Us</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form-wrapper fade-in-up">
+                    <h2>お問い合わせフォーム</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">お名前 <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">会社名・団体名</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">電話番号</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">ご興味のあるサービス</label>
+                            <select id="service" name="service">
+                                <option value="">選択してください</option>
+                                <option value="ec">EC販売支援</option>
+                                <option value="ads">広告運用</option>
+                                <option value="sns">SNS運用代行</option>
+                                <option value="all">すべてのサービス</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">送信する</button>
+                        
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                </div>
+
+                <div class="contact-info-wrapper fade-in-up">
+                    <h2>お問い合わせ先</h2>
+                    <div class="contact-info-box">
+                        <div class="info-item">
+                            <div class="info-icon">📧</div>
+                            <div>
+                                <h4>メールアドレス</h4>
+                                <p><a href="mailto:rintaro.nagayama@cynosuraholdings.com">rintaro.nagayama@cynosuraholdings.com</a></p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div>
+                                <h4>所在地</h4>
+                                <p>〒310-0015<br>茨城県水戸市宮町１丁目２－４、３階</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">⏰</div>
+                            <div>
+                                <h4>営業時間</h4>
+                                <p>平日 9:00 - 18:00<br>（土日祝日を除く）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-note">
+                        <p>お問い合わせいただいた内容は、通常2営業日以内にご返信いたします。</p>
+                        <p>お急ぎの場合は、メールにてご連絡ください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <h2 class="section-title fade-in-up">よくあるご質問</h2>
+            <div class="faq-list">
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>料金はどのくらいかかりますか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>プロジェクトの規模や内容により異なります。まずは無料相談にて、お客様のニーズをお伺いし、最適なプランをご提案させていただきます。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>契約期間の縛りはありますか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>基本的には3ヶ月からの契約となりますが、プロジェクト内容によって柔軟に対応いたします。詳しくはお問い合わせください。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>どのような業種に対応していますか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>地方の特産品、飲食店、宿泊施設、製造業など、幅広い業種に対応しています。特に地方の魅力を発信したい企業様を積極的にサポートしております。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>遠方からでも依頼できますか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>はい、全国どこからでもご依頼いただけます。オンラインミーティングを活用し、遠隔地のお客様ともスムーズにプロジェクトを進めることができます。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>相談だけでも大丈夫ですか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>もちろんです。初回相談は無料ですので、お気軽にご相談ください。貴社の課題や目標をお伺いし、最適なソリューションをご提案いたします。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in-up">
+                    <button class="faq-question">
+                        <span>少額予算でも対応可能ですか？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>はい、少額予算からでも対応可能です。デジタルマーケティングの強みは、少額からでも効果を出せることです。まずはお気軽にご相談ください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo.png" alt="Cynosura Holdings Logo" class="footer-logo">
+                    <h3>株式会社Cynosura Holdings</h3>
+                    <p class="footer-tagline">地方の良いものを、全国へ</p>
+                </div>
+                <div class="footer-section">
+                    <h4>会社情報</h4>
+                    <p>〒310-0015<br>茨城県水戸市宮町１丁目２－４、３階</p>
+                    <p>資本金：300万円</p>
+                </div>
+                <div class="footer-section">
+                    <h4>サービス</h4>
+                    <ul>
+                        <li><a href="services.html">EC販売支援</a></li>
+                        <li><a href="services.html">広告運用</a></li>
+                        <li><a href="services.html">SNS運用代行</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>企業情報</h4>
+                    <ul>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="message.html">代表挨拶</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cynosura Holdings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
